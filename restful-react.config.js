@@ -4,7 +4,7 @@ const STORYBOOK_BASE_URL = 'https://testpdkznotpbe.azurewebsites.net';
 
 const ROOT_PATH = './src/apis';
 
-const API_LIST = ['ReportDesigner', 'ReportingReport', 'ReportingReportParameter'];
+const API_LIST = ['User'];
 
 function generateFetcher() {
   const apiObj = {};

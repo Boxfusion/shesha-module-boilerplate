@@ -6,9 +6,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://boxfusion@dev.azure.com/boxfusion/shesha-reactjs-reports/_git/shesha-reactjs-reports"
+    "url": "https://github.com/Boxfusion/-shesha-module-boilerplate"
   },
-  "homepage": "https://github.com/Boxfusion/-shesha-module-boilerplate",
+  "homepage": "https://github.com/Boxfusion/-shesha-module-boilerplate.git",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
@@ -160,13 +160,10 @@
     "webpack": "^5.59.1"
   },
   "dependencies": {
-    "@devexpress/analytics-core": "^20.2.4",
     "@microsoft/signalr": "^5.0.11",
     "@use-it/interval": "^1.0.0",
     "axios": "^0.21.4",
     "classnames": "^2.3.1",
-    "devexpress-reporting": "^20.2.4",
-    "devextreme": "^20.2.4",
     "file-saver": "^2.0.5",
     "knockout": "^3.5.1",
     "nanoid": "^3.1.30",
