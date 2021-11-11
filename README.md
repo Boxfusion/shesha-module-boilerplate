@@ -5,8 +5,8 @@
 #### Familiar with Git?
 
 ```
-git clone https://github.com/Boxfusion/shesha-reports.git
-cd shesha-reports
+git clone https://github.com/Boxfusion/shesha-module-boilerplate.git
+cd shesha-module-boilerplate
 npm install
 ```
 
