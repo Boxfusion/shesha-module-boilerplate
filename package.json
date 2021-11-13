@@ -1,14 +1,13 @@
 {
   "name": "@shesha/module-boilerplate",
-  "version": "0.0.1",
   "description": "Boilerplate for writing React Libraries bundled with Rollup.js to commonJs and ES6 Modules and React Storybook",
   "author": "Boxfusion Team",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Boxfusion/-shesha-module-boilerplate"
+    "url": "https://github.com/Boxfusion/shesha-module-boilerplate"
   },
-  "homepage": "https://github.com/Boxfusion/-shesha-module-boilerplate.git",
+  "homepage": "https://github.com/Boxfusion/shesha-module-boilerplate.git",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",

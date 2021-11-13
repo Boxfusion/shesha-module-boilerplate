@@ -9,7 +9,7 @@ module.exports = {
     [pkg.name]: path.resolve(__dirname, 'src'),
   },
   ribbon: {
-    url: 'https://github.com/Boxfusion/-shesha-module-boilerplate',
+    url: 'https://github.com/Boxfusion/shesha-module-boilerplate',
     text: 'Fork me on GitHub',
   },
   showSidebar: true,

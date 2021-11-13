@@ -1,0 +1,64 @@
+name: shesha-module-boilerplate-0.x.x
+
+on:
+  push:
+    branches: [ main ]
+
+env:
+  NODE_VERSION: '14.x'
+
+jobs:
+
+  # build the project
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # checkout latest code
+      - name: Get Sources
+        uses: actions/checkout@v2
+        with:
+          clean: true
+      # setup node
+      - name: Setup Node ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          registry-url: 'https://registry.npmjs.org'
+      # install dependencies
+      - name: Install Dependencies
+        run: npm install
+      # prepare shesha-module-boilerplate for pipeline
+      - name: Prepare shesha-module-boilerplate for Pipeline
+        run: npm run prepare
+      # build storybook
+      - name: Build Storybook
+        run: npm run build-storybook
+      # tag shesha-module-boilerplate
+      - name: Tag shesha-module-boilerplate
+        id: tag_version
+        uses: mathieudutour/github-tag-action@v5.6
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          tag_prefix: ""
+      # update package.json tag
+      - name: Update package.json
+        uses: reedyuk/npm-version@1.1.1
+        with:
+          version: ${{ steps.tag_version.outputs.new_tag }}
+          # package: 'subproject-directory/'
+          # git-tag-version: 'true'
+      # build shesha-module-boilerplate for production
+      - name: Build shesha-module-boilerplate for Production
+        run: npm run build
+      # create github release
+      - name: Create Github Release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ steps.tag_version.outputs.new_tag }}
+          name: ${{ steps.tag_version.outputs.new_tag }}
+          body: ${{ steps.tag_version.outputs.changelog }}
+      # publish shesha-module-boilerplate to npmjs
+      - name: Publish shesha-module-boilerplate to npmjs
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPMJS_API_KEY }}
