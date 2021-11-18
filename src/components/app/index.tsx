@@ -1,5 +1,5 @@
 import React, { FC, PropsWithChildren } from 'react';
-import { ShaApplicationProvider, SidebarMenuDefaultsProvider } from 'shesha-reactjs';
+import { ShaApplicationProvider, SidebarMenuDefaultsProvider } from '@shesha/reactjs';
 import AuthContainer from 'components/authedContainer';
 
 export const StoryApp: FC<PropsWithChildren<any>> = ({ children }) => {

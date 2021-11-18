@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { CollapsiblePanel } from 'shesha-reactjs';
+import { CollapsiblePanel } from '@shesha/reactjs';
 // import AllReportsPage from './';
 
 // // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
