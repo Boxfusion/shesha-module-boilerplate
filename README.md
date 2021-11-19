@@ -114,7 +114,7 @@ For custom layouts, styling and more information about the Styleguide please ref
 
 ### Commit lint & Conventional commit
 
-- [commitlint](https://commitlint.js.org/) & [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+- [commitlint](https://commitlint.js.org/) & [Conventional Commits](https://www.conventionalcommits.org/)
 
 ### Styleguide
 
