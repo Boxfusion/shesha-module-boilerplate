@@ -112,6 +112,10 @@ For custom layouts, styling and more information about the Styleguide please ref
 
 - [Prettier](https://prettier.io/)
 
+### Code Formatter
+
+- [commitlint](https://commitlint.js.org/)
+
 ### Styleguide
 
 - [React Storybook](https://storybook.js.org/docs/react/get-started/introduction)
